@@ -174,8 +174,8 @@ export default function Page() {
           <span>© 2026 Oscah Juma</span>
           <div>
             <a href="#top">Back to top ↑</a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-            <a href="https://www.instagram.com" target="_blank" rel="noreferrer">Instagram ↗</a>
+            <a href="https://www.linkedin.com/in/oscah-juma-042295226/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+            <a href="https://dribbble.com/oscah-juma" target="_blank" rel="noreferrer">Dribbble ↗</a>
           </div>
           <span>Built with intent.</span>
         </div>
