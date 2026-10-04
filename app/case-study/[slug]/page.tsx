@@ -14,7 +14,7 @@ export default function CaseStudyPage() {
   const study = studies[slug] ?? studies.northstar
 
   return <main className={`study-page study-${study.tone}`}>
-    <header className="study-header"><Link className="wordmark" href="/#top"><span className="mark">M</span><span>Oscah<br />Juma</span></Link><Link className="back-link" href="/#work">← Back to work</Link></header>
+    <header className="study-header"><Link className="wordmark" href="/#top"><span className="Oscah">O</span><span>Oscah<br />Juma</span></Link><Link className="back-link" href="/#work">← Back to work</Link></header>
     <section className="study-hero container"><p className="eyebrow">UI/UX case study / Selected work</p><h1>{study.title}<br /><em>{study.label}</em></h1><p className="study-intro">{study.intro}</p><img className="study-cover" src={study.image} alt={`${study.title} interface project`} /></section>
     <section className="study-content container"><aside><p className="eyebrow">The approach</p><ol>{study.steps.map((step, index) => <li key={step}><span>0{index + 1}</span>{step}</li>)}</ol></aside><div className="study-copy"><div><p className="eyebrow">01 / The challenge</p><h2>Start with the<br /><em>real problem.</em></h2><p>{study.challenge}</p></div><div><p className="eyebrow">02 / The approach</p><h2>Make the complex<br /><em>feel possible.</em></h2><p>{study.approach}</p></div><div><p className="eyebrow">03 / The outcome</p><h2>Useful by<br /><em>design.</em></h2><p>{study.outcome}</p></div></div></section>
     <footer className="study-footer container"><Link href="/#work">← View all work</Link><Link href="/#contact">Start a project ↗</Link></footer>

@@ -38,13 +38,13 @@ export default function Page() {
   return <main>
     <div className="scroll-progress" />
     <header className="site-header">
-      <a className="wordmark" href="#top" aria-label="Mira Okafor home"><span className="mark">M</span><span>Oscah<br />Juma</span></a>
+      <a className="wordmark" href="#top" aria-label="Oscah Juma home"><span className="Oscah">O</span><span>Oscah<br />Juma</span></a>
       <nav className="site-nav" aria-label="Primary navigation"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
       <a className="availability" href="#contact"><span className="status-dot" />Available for select projects</a>
     </header>
 
     <section className="hero container" id="top">
-      <p className="eyebrow reveal">Independent designer / Lagos + everywhere</p>
+      <p className="eyebrow reveal">Independent designer / Kenya + everywhere</p>
       <h1 className="hero-title reveal">Designing <em>useful</em><br />things with feeling.</h1>
       <div className="hero-bottom reveal"><p>Graphic designer and UI/UX partner for teams building what comes next. I make identities, interfaces, and motion that earn attention.</p><a className="circle-link" href="#work" aria-label="Scroll to selected work">↓</a></div>
       <div className="hero-stamp" aria-hidden="true">GOOD<br />WORK<br /><span>↓</span></div>
