@@ -1,0 +1,22 @@
+'use client'
+
+import Link from 'next/link'
+import { useParams } from 'next/navigation'
+
+const studies: Record<string, { title: string; label: string; image: string; tone: string; intro: string; challenge: string; approach: string; outcome: string; steps: string[] }> = {
+  'mercan-autospares': { title: 'Mercan Autospares', label: 'A clearer route to automotive care.', image: '/projects/northstar.png', tone: 'coral', intro: 'A digital experience for an automotive business, bringing together vehicle services, auto parts, and customer information.', challenge: 'Customers needed to move between parts, services, and business information without knowing where to start or which option was right for their vehicle.', approach: 'I organized the experience around clear service pathways, responsive layouts, and a visual hierarchy that makes automotive information easier to scan and act on.', outcome: 'A more approachable web experience that helps customers find the right product or service with less friction.', steps: ['Discovery & interviews', 'Information architecture', 'Responsive UI design', 'Prototype & testing'] },
+  'agent-4': { title: 'Agent 4', label: 'Social media management, simplified.', image: '/projects/field-notes.png', tone: 'blue', intro: 'A social media management platform designed to simplify content planning, publishing, and performance management.', challenge: 'Social teams were balancing calendars, approvals, publishing, and reporting across disconnected tools, creating unnecessary context switching.', approach: 'I mapped the publishing workflow and designed a focused dashboard that brings planning, content status, and performance into one clear workspace.', outcome: 'A streamlined product experience that gives teams better visibility over their content and more confidence in what goes live next.', steps: ['Workflow research', 'Dashboard architecture', 'Interaction design', 'Beta validation'] },
+  'go-cart': { title: 'Go Cart', label: 'A multivendor marketplace built to move.', image: '/projects/relay.png', tone: 'green', intro: 'A multivendor delivery platform connecting customers, vendors, and delivery operations through a unified digital experience.', challenge: 'Customers, vendors, and delivery teams each needed different information at different moments, but the experience had to feel like one connected system.', approach: 'I designed the core marketplace and operational dashboards around shared order states, clear handoffs, and fast actions for every participant.', outcome: 'A unified product direction that makes ordering, vendor management, and delivery coordination feel more transparent.', steps: ['Service mapping', 'Marketplace flows', 'Operations dashboard', 'Design system'] },
+}
+
+export default function CaseStudyPage() {
+  const { slug } = useParams<{ slug: string }>()
+  const study = studies[slug] ?? studies.northstar
+
+  return <main className={`study-page study-${study.tone}`}>
+    <header className="study-header"><Link className="wordmark" href="/#top"><span className="mark">M</span><span>Oscah<br />Juma</span></Link><Link className="back-link" href="/#work">← Back to work</Link></header>
+    <section className="study-hero container"><p className="eyebrow">UI/UX case study / Selected work</p><h1>{study.title}<br /><em>{study.label}</em></h1><p className="study-intro">{study.intro}</p><img className="study-cover" src={study.image} alt={`${study.title} interface project`} /></section>
+    <section className="study-content container"><aside><p className="eyebrow">The approach</p><ol>{study.steps.map((step, index) => <li key={step}><span>0{index + 1}</span>{step}</li>)}</ol></aside><div className="study-copy"><div><p className="eyebrow">01 / The challenge</p><h2>Start with the<br /><em>real problem.</em></h2><p>{study.challenge}</p></div><div><p className="eyebrow">02 / The approach</p><h2>Make the complex<br /><em>feel possible.</em></h2><p>{study.approach}</p></div><div><p className="eyebrow">03 / The outcome</p><h2>Useful by<br /><em>design.</em></h2><p>{study.outcome}</p></div></div></section>
+    <footer className="study-footer container"><Link href="/#work">← View all work</Link><Link href="/#contact">Start a project ↗</Link></footer>
+  </main>
+}
