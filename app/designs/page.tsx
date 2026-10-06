@@ -3,19 +3,22 @@
 import { useMemo, useState } from 'react'
 
 const designs = [
-  { title: 'Pure Uxels', type: 'Brand identity', year: '2023', category: 'identity', image: 'https://p-images.vercel.app/images/branding/pux.png', size: 'wide' },
-  { title: 'Imani Realty Groups', type: 'Editorial direction', year: '2022', category: 'editorial', image: 'https://cdn.sanity.io/images/pda6g6vd/production/a8717300444cf24c3cad6b72002d08889bd3137c-1280x720.png', size: 'wide' },
-  { title: 'Newlife Fountain Ministries', type: 'Motion identity', year: '2023', category: 'motion', image: 'https://p-images.vercel.app/images/graphics/youth%20flyer%20nfm.png', size: 'tall' },
-  { title: 'Mercan Autospares', type: 'Digital campaign', year: '2024', category: 'digital', image: 'https://p-images.vercel.app/images/ui-ux/Component%2016.png', size: 'wide' },
-  { title: 'Football Match', type: 'Motion graphics', year: '2024', category: 'motion', image: 'https://p-images.vercel.app/images/graphics/autoprogress.png', size: 'standard' },
-  { title: 'Asset Builders', type: 'Visual system', year: '2023', category: 'identity', image: 'https://p-images.vercel.app/images/branding/ab.png', size: 'wide' },
-  { title: 'Agent 4', type: 'Digital campaign', year: '2024', category: 'digital', image: 'https://cdn.sanity.io/images/pda6g6vd/production/d9add872e9b075eaf35df4d0b0186315f198947b-2978x1498.png', size: 'wide' },
-  { title: 'Go Cart', type: 'Digital campaign', year: '2024', category: 'digital', image: 'https://p-images.vercel.app/images/ui-ux/gocart.png', size: 'wide' },
-  { title: 'Fashion', type: 'Brand identity', year: '2022', category: 'identity', image: 'https://p-images.vercel.app/images/projects/fashion.jpeg', size: 'tall' },
-  { title: 'X Mobit', type: 'Editorial direction', year: '2023', category: 'editorial', image: 'https://p-images.vercel.app/images/graphics/Send.%20Confirm.%20Done..png', size: 'tall' },
-  { title: 'Quest Foods', type: 'Motion graphics', year: '2023', category: 'motion', image: 'https://p-images.vercel.app/images/graphics/12.png', size: 'standard' },
-  { title: 'Zetor Global', type: 'Motion graphics', year: '2023', category: 'motion', image: 'https://p-images.vercel.app/images/projects/Zetor%20Global%202175.png', size: 'standard' },
-  { title: 'Pux', type: 'Brand identity', year: '2023', category: 'identity', image: 'https://p-images.vercel.app/images/graphics/pux.jpg', size: 'standard' },
+  { title: 'Pure Uxels', type: 'Brand identity', year: '2025', category: 'identity', image: 'https://p-images.vercel.app/images/branding/pux.png', size: 'wide' },
+  { title: 'Imani Realty Groups', type: 'Brand identity', year: '2026', category: 'identity', image: 'https://cdn.sanity.io/images/pda6g6vd/production/a8717300444cf24c3cad6b72002d08889bd3137c-1280x720.png', size: 'wide' },
+  { title: 'Newlife Fountain', type: 'UI/UX Design', year: '2023', category: 'ui-ux', image: 'https://p-images.vercel.app/images/ui-ux/nfm.png', size: 'wide' },
+  { title: 'Precious', type: 'Print Design', year: '2023', category: 'editorial', image: 'https://p-images.vercel.app/images/projects/Her%20Own%20Beauty.png', size: 'tall' },
+  { title: 'Youth Ministry', type: 'Digital campaign', year: '2026', category: 'digital', image: 'https://p-images.vercel.app/images/projects/YOUTH%20NFM.png', size: 'tall' },
+  { title: 'Mercan Autospares', type: 'UI/UX Design', year: '2025', category: 'ui-ux', image: 'https://p-images.vercel.app/images/ui-ux/Component%2016.png', size: 'wide' },
+  { title: 'Football Match', type: 'Digital campaign', year: '2024', category: 'digital', image: 'https://p-images.vercel.app/images/graphics/autoprogress.png', size: 'standard' },
+  { title: 'Asset Builders', type: 'Brand identity', year: '2025', category: 'identity', image: 'https://p-images.vercel.app/images/branding/ab.png', size: 'wide' },
+  { title: 'Agent 4', type: 'UI/UX Design', year: '2025', category: 'ui-ux', image: 'https://cdn.sanity.io/images/pda6g6vd/production/d9add872e9b075eaf35df4d0b0186315f198947b-2978x1498.png', size: 'wide' },
+  { title: 'Go Cart', type: 'UI/UX Design', year: '2024', category: 'ui-ux', image: 'https://p-images.vercel.app/images/ui-ux/gocart.png', size: 'wide' },
+  { title: 'Fashion', type: 'Digital campaign', year: '2022', category: 'digital', image: 'https://p-images.vercel.app/images/projects/fashion.jpeg', size: 'tall' },
+  { title: 'X Mobit', type: 'Digital campaign', year: '2025', category: 'digital', image: 'https://p-images.vercel.app/images/graphics/Send.%20Confirm.%20Done..png', size: 'tall' },
+  { title: 'Quest Foods', type: 'Digital campaign', year: '2025', category: 'digital', image: 'https://p-images.vercel.app/images/graphics/12.png', size: 'standard' },
+  { title: 'Newlife Fountain Ministries', type: 'Brand identity', year: '2025', category: 'identity', image: 'https://p-images.vercel.app/images/graphics/youth%20flyer%20nfm.png', size: 'tall' },
+  { title: 'Zetor Global', type: 'Digital campaign', year: '2025', category: 'digital', image: 'https://p-images.vercel.app/images/projects/Zetor%20Global%202175.png', size: 'standard' },
+  { title: 'Pux', type: 'Digital campaign', year: '2026', category: 'digital', image: 'https://p-images.vercel.app/images/graphics/pux.jpg', size: 'standard' },
 ]
 
 export default function DesignsPage() {
@@ -24,7 +27,7 @@ export default function DesignsPage() {
 
   return <main className="designs-page">
     <header className="site-header designs-header">
-      <a className="wordmark" href="/"><span className="mark">M</span><span>Oscah<br />Juma</span></a>
+      <a className="wordmark" href="/"><span className="mark">O</span><span>Oscah<br />Juma</span></a>
       <a className="back-link" href="/">← Back home</a>
     </header>
     <section className="designs-hero container">
