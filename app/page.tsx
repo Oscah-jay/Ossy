@@ -85,6 +85,7 @@ export default function Page() {
           <span className="tile-footer">Ministry identity</span>
         </div>
       </div>
+      <a className="view-all-designs" href="/designs">View all designs <span>↗</span></a>
     </section>
 
     <section className="about-section" id="about">
