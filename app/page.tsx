@@ -59,11 +59,69 @@ export default function Page() {
 
     <section className="case-section" id="case-studies"><div className="container"><div className="section-heading case-heading"><div><p className="eyebrow">02 / UI/UX case studies</p><h2>From the first<br /><em>question</em> to shipped.</h2></div><p className="section-intro">Every interface starts with listening. Here is how I turn ambiguity into products people want to use.</p></div><div className="case-layout"><div className="case-tabs" role="tablist" aria-label="Case studies">{caseStudies.map((item, index) => <button key={item.title} className={activeCase === index ? 'case-tab active' : 'case-tab'} onClick={() => setActiveCase(index)} role="tab" aria-selected={activeCase === index}><span>0{index + 1}</span>{item.title}<b>↗</b></button>)}</div><article className={`case-detail detail-${caseStudies[activeCase].tone}`}><p className="case-kicker">{caseStudies[activeCase].title} / Product design</p><h3>{caseStudies[activeCase].label}</h3><p>{caseStudies[activeCase].copy}</p><div className="case-stats">{caseStudies[activeCase].stats.map(([value, label]) => <div key={label}><strong>{value}</strong><span>{label}</span></div>)}</div><div className="case-art"><span className="wireframe-top" /><span className="wireframe-card" /><span className="wireframe-side" /><span className="wireframe-button" /></div></article></div></div></section>
 
-    <section className="graphic-section container" id="graphic-work"><div className="section-heading"><div><p className="eyebrow">03 / Graphic design</p><h2>Built to live<br /><em>outside the screen.</em></h2></div><p className="section-intro">Identity systems with enough structure to stay consistent and enough spirit to stay alive.</p></div><div className="graphic-grid"><div className="graphic-tile tile-poster"><span className="tile-label">Pure Uxels / 2023</span><strong>MAKE<br />ROOM<br />FOR<br /><i>MORE</i></strong><span className="tile-footer">A community brand<br />for curious people.</span></div><div className="graphic-tile tile-editorial"><span className="tile-label">Imani Realty Groups / 2022</span><strong>the<br /><i>quiet</i><br />issue</strong><span className="tile-footer">Vol. 01 — An editorial study.</span></div><div className="graphic-tile tile-motion"><span className="tile-label">Newlife Fountain Ministries / 2023</span><div className="motion-type">MOVE<br />WITH<br /><i>INTENT</i></div><span className="play-button" aria-label="Play After hours motion preview">▶</span><span className="tile-footer">Motion identity / 00:24</span></div></div></section>
+    <section className="graphic-section container" id="graphic-work">
+      <div className="section-heading">
+        <div>
+          <p className="eyebrow">03 / Graphic design</p>
+          <h2>Built to live<br /><em>outside the screen.</em></h2>
+        </div>
+        <p className="section-intro">Identity systems with enough structure to stay 
+          consistent and enough spirit to stay alive.</p>
+      </div>
+      <div className="graphic-grid">
+        <div className="graphic-tile tile-poster">
+          <span className="tile-label">Pure Uxels / 2025</span>
+          <strong>CRAFT<br />YOUR<br /><i>identity</i></strong>
+          <span className="tile-footer">Creative studio <br/>Brand & digital experiences.</span>
+        </div>
+        <div className="graphic-tile tile-editorial">
+          <span className="tile-label">Imani Realty Groups / 2026</span>
+          <strong>FIND<br />YOUR<br /><i>PLACE</i></strong>
+          <span className="tile-footer">Real estate identity</span>
+        </div>
+        <div className="graphic-tile tile-motion">
+          <span className="tile-label">Newlife Fountain Ministries / 2024</span>
+          <div className="motion-type">FAITH<br />IN<br /><i>ACTION</i></div>
+          <span className="tile-footer">Ministry identity</span>
+        </div>
+      </div>
+    </section>
 
-    <section className="about-section" id="about"><div className="container about-layout"><div><p className="eyebrow">04 / A little about me</p><h2>Equal parts<br /><em>curious</em> and<br />particular.</h2></div><div className="about-copy"><p className="lead">I’m Oscah, a multidisciplinary designer who likes complex problems, clear systems, and the small details that make a thing feel right.</p><p>For the last 5 years I’ve partnered with founders, cultural teams, and product people to turn early ideas into work with a point of view. I work across brand, digital, and motion — usually all three at once.</p><div className="about-links"><a href="#contact">Let’s work together <span>↗</span></a><a href="#contact">Download résumé <span>↓</span></a></div></div></div></section>
+    <section className="about-section" id="about">
+      <div className="container about-layout">
+        <div>
+          <p className="eyebrow">04 / A little about me</p>
+          <h2>Equal parts<br /><em>curious</em> and<br />particular.</h2>
+        </div>
+        <div className="about-copy">
+          <p className="lead">I’m Oscah, a multidisciplinary designer who likes complex problems, clear systems, and the small details that make a thing feel right.</p>
+          <p>For the last 5 years I’ve partnered with founders, cultural teams, and product people to turn early ideas into work with a point of view. I work across brand, digital, and motion — usually all three at once.</p>
+          <div className="about-links">
+            <a href="#contact">Let’s work together <span>↗</span></a>
+            <a href="#contact">Download résumé <span>↓</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <footer className="site-footer" id="contact"><div className="container"><div className="footer-top"><p className="eyebrow">05 / Start a conversation</p><h2>Have a good<br /><em>one?</em> Say hello.</h2><a className="email-link" href="mailto:oscahjuma270@gmail.com">oscahjuma270@gmail.com <span>↗</span></a></div><div className="footer-bottom"><span>© 2026 Oscah Juma</span><div><a href="#top">Back to top ↑</a><a href="https://www.linkedin.com/in/oscah-juma-042295226/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://dribbble.com/oscah-juma" target="_blank" rel="noreferrer">Dribbble ↗</a></div><span>Built with intent.</span></div></div></footer>
+    <footer className="site-footer" id="contact">
+      <div className="container">
+        <div className="footer-top">
+          <p className="eyebrow">05 / Start a conversation</p>
+          <h2>Have a good<br /><em>one?</em> Say hello.</h2>
+          <a className="email-link" href="mailto:oscahjuma270@gmail.com">oscahjuma270@gmail.com <span>↗</span></a>
+        </div>
+        <div className="footer-bottom">
+          <span>© 2026 Oscah Juma</span>
+          <div>
+            <a href="#top">Back to top ↑</a>
+            <a href="https://www.linkedin.com/in/oscah-juma-042295226/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+            <a href="https://dribbble.com/oscah-juma" target="_blank" rel="noreferrer">Dribbble ↗</a>
+          </div>
+          <span>Built with intent.</span>
+        </div>
+      </div>
+    </footer>
   </main>
 }
 
