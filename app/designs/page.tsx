@@ -33,6 +33,7 @@ const designs: Design[] = [
   { title: 'X Mobit', type: 'Digital campaign', year: '2025', category: 'digital', image: 'https://p-images.vercel.app/images/graphics/Send.%20Confirm.%20Done..png', size: 'tall' },
   { title: 'Quest Foods', type: 'Digital campaign', year: '2025', category: 'digital', image: 'https://p-images.vercel.app/images/graphics/12.png', size: 'standard' },
   { title: 'Newlife Fountain Ministries', type: 'Brand identity', year: '2025', category: 'identity', image: 'https://p-images.vercel.app/images/graphics/youth%20flyer%20nfm.png', size: 'tall' },
+  { title: 'Funny Poster', type: 'Digital campaign', year: '2026', category: 'digital', image: 'https://p-images.vercel.app/images/graphics/funny.png', size: 'standard' },
   { title: 'Zetor Global', type: 'Digital campaign', year: '2025', category: 'digital', image: 'https://p-images.vercel.app/images/projects/Zetor%20Global%202175.png', size: 'standard' },
   { title: 'Pux', type: 'Digital campaign', year: '2026', category: 'digital', image: 'https://p-images.vercel.app/images/graphics/pux.jpg', size: 'standard' },
   { title: 'ECO Friendly', type: 'Short-form video', year: '2025', category: 'motion', image: 'https://p-images.vercel.app/images/graphics/pot.png', video: 'https://ossy.vercel.app/Assets/images/projects/Cultivating%20Beauty,%20One%20Pot%20at%20a%20Time.mp4', size: 'wide' },
