@@ -60,6 +60,29 @@ button { color: inherit; font: inherit; cursor: pointer; }
 .preview-arrow { align-items: center; border: 1px solid var(--ink); border-radius: 50%; display: flex; flex: 0 0 auto; font-size: 18px; height: 34px; justify-content: center; width: 34px; }
 .designs-footer { border-top: 1px solid var(--rule); display: flex; font-family: var(--mono); font-size: 10px; justify-content: space-between; padding-bottom: 28px; padding-top: 18px; text-transform: uppercase; }
 .designs-footer a:hover { color: var(--coral); }
+
+/* Motion / video projects */
+.design-image-button { background: none; border: 0; display: block; padding: 0; text-align: left; width: 100%; }
+.design-image-button:focus-visible { outline: 2px solid var(--coral); outline-offset: 4px; }
+.design-hover-video { height: 100%; inset: 0; object-fit: cover; opacity: 0; pointer-events: none; position: absolute; transition: opacity .3s; width: 100%; }
+.design-image-button:hover .design-hover-video { opacity: 1; }
+.play-icon { align-items: center; background: var(--ink); border-radius: 50%; color: var(--paper); display: flex; font-size: 16px; height: 56px; justify-content: center; left: 50%; padding-left: 3px; position: absolute; top: 50%; transform: translate(-50%, -50%); transition: transform .2s, background .2s, color .2s; width: 56px; }
+.design-image-button:hover .play-icon { background: var(--coral); color: var(--ink); transform: translate(-50%, -50%) scale(1.1); }
+.archive-empty { color: var(--muted); font-family: var(--mono); font-size: 11px; padding: 60px 0; text-transform: uppercase; }
+
+/* Video lightbox */
+.video-lightbox { align-items: center; background: rgba(16, 16, 16, .92); display: flex; inset: 0; justify-content: center; padding: 5vw; position: fixed; z-index: 1000; }
+.video-lightbox-inner { max-width: 1100px; position: relative; width: 100%; }
+.video-frame { aspect-ratio: 16 / 9; background: #000; width: 100%; }
+.video-frame iframe, .video-frame video { border: 0; display: block; height: 100%; width: 100%; }
+.video-close { background: none; border: 0; color: var(--paper); font-family: var(--mono); font-size: 18px; padding: 8px 0; position: absolute; right: 0; top: -42px; }
+.video-close:hover { color: var(--coral); }
+.video-caption { color: var(--paper); font-family: var(--mono); font-size: 10px; margin: 14px 0 0; opacity: .7; text-transform: uppercase; }
+
+@media (max-width: 500px) {
+  .play-icon { height: 46px; width: 46px; }
+  .video-lightbox { padding: 4vw; }
+}
 @media (max-width: 800px) {
   .designs-hero { padding-bottom: 85px; padding-top: 85px; }
   .designs-intro { margin-left: 0; margin-top: 40px; }
