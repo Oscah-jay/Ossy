@@ -99,7 +99,6 @@ export default function Page() {
           <p>For the last 5 years I’ve partnered with founders, cultural teams, and product people to turn early ideas into work with a point of view. I work across brand, digital, and motion — usually all three at once.</p>
           <div className="about-links">
             <a href="#contact">Let’s work together <span>↗</span></a>
-            <a href="#contact">Download résumé <span>↓</span></a>
           </div>
         </div>
       </div>
