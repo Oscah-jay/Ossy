@@ -13,6 +13,7 @@ type Design = {
 }
 
 const designs: Design[] = [
+  { title: 'Designer', type: 'Print Design', year: '2026', category: 'editorial', image: 'https://p-images.vercel.app/images/projects/O.png', size: 'tall' },
   { title: 'Pure Uxels', type: 'Brand identity', year: '2025', category: 'identity', image: 'https://p-images.vercel.app/images/branding/pux.png', size: 'wide' },
   { title: 'Charity', type: 'Motion graphics', year: '2026', category: 'motion', image: 'https://p-images.vercel.app/images/graphics/weg.png', video: 'https://ossy.vercel.app/Assets/images/projects/WE%20support%20less%20privileged%20children%20in%20africa.mp4', size: 'wide' },
   { title: 'Newlife Fountain', type: 'UI/UX Design', year: '2024', category: 'ui-ux', image: 'https://p-images.vercel.app/images/ui-ux/nfm.png', size: 'wide' },
