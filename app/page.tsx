@@ -31,6 +31,13 @@ const services = [
   { id: '03', title: 'Editorial & print', copy: 'Flyers, posters, brochures, and layouts that carry a brand beyond the screen with the same care.', tags: ['Print design', 'Layout', 'Packaging'], tone: 'yellow' },
   { id: '04', title: 'Motion & campaigns', copy: 'Social campaigns, promos, and motion graphics that help ideas get noticed and remembered.', tags: ['Social media', 'Motion graphics', 'Promo video'], tone: 'purple' },
 ]
+
+const process = [
+  { id: '01', title: 'Discover', copy: 'I start by listening. I learn about your goals, audience, and constraints so the work solves the right problem.', time: 'Phase 1', tone: 'coral' },
+  { id: '02', title: 'Define', copy: 'Insights turn into a clear direction: moodboards, structure, and a plan everyone agrees on before design begins.', time: 'Phase 2', tone: 'blue' },
+  { id: '03', title: 'Design', copy: 'I build, test, and refine. You see progress early and often, with room for feedback at every stage.', time: 'Phase 3', tone: 'lime' },
+  { id: '04', title: 'Deliver', copy: 'Final files, guidelines, and handoff, plus support after launch so everything keeps working as intended.', time: 'Phase 4', tone: 'purple' },
+]
 export default function Page() {
   const [filter, setFilter] = useState('all')
   const [activeCase, setActiveCase] = useState(0)
@@ -115,10 +122,32 @@ export default function Page() {
       </div>
     </section>
 
+        <section className="process-section" id="process">
+      <div className="container">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">05 / How I work</p>
+            <h2>A simple path from<br /><em>idea</em> to done.</h2>
+          </div>
+          <p className="section-intro">A clear process keeps projects on time, on budget, and free of surprises.</p>
+        </div>
+        <div className="process-grid">
+          {process.map((step) => (
+            <article className={`process-step process-${step.tone}`} key={step.id}>
+              <span className="process-num">{step.id}</span>
+              <h3>{step.title}</h3>
+              <p>{step.copy}</p>
+              <span className="process-time">{step.time}</span>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
     <section className="about-section" id="about">
       <div className="container about-layout">
         <div>
-          <p className="eyebrow">05 / A little about me</p>
+          <p className="eyebrow">06 / A little about me</p>
           <h2>Equal parts<br /><em>curious</em> and<br />particular.</h2>
         </div>
         <div className="about-copy">
@@ -134,7 +163,7 @@ export default function Page() {
     <footer className="site-footer" id="contact">
       <div className="container">
         <div className="footer-top">
-          <p className="eyebrow">06 / Start a conversation</p>
+          <p className="eyebrow">07 / Start a conversation</p>
           <h2>Have a good<br /><em>one?</em> Say hello.</h2>
           <a className="email-link" href="mailto:oscahjuma270@gmail.com">oscahjuma270@gmail.com <span>↗</span></a>
         </div>

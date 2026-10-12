@@ -97,6 +97,33 @@ button { color: inherit; font: inherit; cursor: pointer; }
 .service-row:hover .service-tags li { border-color: var(--ink); }
 .service-arrow { align-items: center; border: 1px solid var(--ink); border-radius: 50%; display: flex; font-size: 18px; height: 34px; justify-content: center; width: 34px; }
 
+/* Process */
+.process-section { background: var(--ink); color: var(--paper); padding: 130px 0 150px; }
+.process-section .eyebrow, .process-section .section-intro { color: #a5a19a; }
+.process-grid { display: grid; gap: 24px; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.process-step { border-top: 1px solid #403f3b; display: flex; flex-direction: column; min-height: 320px; padding-top: 24px; position: relative; transition: border-color .25s; }
+.process-step::before { background: var(--tone, var(--coral)); content: ''; height: 3px; left: 0; position: absolute; top: -2px; transition: width .35s ease; width: 0; }
+.process-step:hover::before { width: 100%; }
+.process-coral { --tone: var(--coral); }
+.process-blue { --tone: var(--blue); }
+.process-lime { --tone: var(--lime); }
+.process-purple { --tone: var(--purple); }
+.process-num { color: var(--tone); font-family: var(--mono); font-size: 10px; }
+.process-step h3 { font-size: clamp(30px, 3.2vw, 46px); font-weight: 500; letter-spacing: -.08em; line-height: 1; margin: 48px 0 18px; }
+.process-step p { color: #a5a19a; font-size: 14px; line-height: 1.55; margin: 0; max-width: 300px; }
+.process-time { border: 1px solid #403f3b; font-family: var(--mono); font-size: 10px; margin-top: auto; padding: 6px 8px; text-transform: uppercase; width: fit-content; }
+
+@media (max-width: 800px) {
+  .process-section { padding: 90px 0; }
+  .process-grid { gap: 40px 20px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .process-step { min-height: 0; }
+  .process-step h3 { margin-top: 32px; }
+  .process-time { margin-top: 24px; }
+}
+@media (max-width: 500px) {
+  .process-grid { grid-template-columns: 1fr; }
+}
+
 @media (max-width: 800px) {
   .services-section { padding-bottom: 95px; padding-top: 90px; }
   .service-row { gap: 14px 16px; grid-template-columns: 32px 1fr 34px; padding: 28px 0; }
