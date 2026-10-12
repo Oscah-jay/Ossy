@@ -79,6 +79,30 @@ button { color: inherit; font: inherit; cursor: pointer; }
 .video-close:hover { color: var(--coral); }
 .video-caption { color: var(--paper); font-family: var(--mono); font-size: 10px; margin: 14px 0 0; opacity: .7; text-transform: uppercase; }
 
+/* Services */
+.services-section { padding-bottom: 150px; padding-top: 135px; }
+.service-list { border-top: 1px solid var(--ink); }
+.service-row { align-items: center; border-bottom: 1px solid var(--ink); display: grid; gap: 24px; grid-template-columns: 40px 1.1fr 1.4fr 1fr 36px; padding: 34px 0; transition: background .25s, padding .25s; }
+.service-row:hover { padding-left: 20px; padding-right: 20px; }
+.service-coral:hover { background: var(--coral); }
+.service-blue:hover { background: var(--blue); }
+.service-yellow:hover { background: var(--yellow); }
+.service-purple:hover { background: var(--purple); }
+.service-id { font-family: var(--mono); font-size: 10px; }
+.service-row h3 { font-size: clamp(26px, 3vw, 42px); font-weight: 500; letter-spacing: -.07em; line-height: 1; margin: 0; }
+.service-row p { color: var(--muted); font-size: 14px; line-height: 1.5; margin: 0; max-width: 380px; transition: color .25s; }
+.service-row:hover p { color: var(--ink); }
+.service-tags { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 0; padding: 0; }
+.service-tags li { border: 1px solid var(--rule); font-family: var(--mono); font-size: 10px; padding: 6px 8px; text-transform: uppercase; transition: border-color .25s; }
+.service-row:hover .service-tags li { border-color: var(--ink); }
+.service-arrow { align-items: center; border: 1px solid var(--ink); border-radius: 50%; display: flex; font-size: 18px; height: 34px; justify-content: center; width: 34px; }
+
+@media (max-width: 800px) {
+  .services-section { padding-bottom: 95px; padding-top: 90px; }
+  .service-row { gap: 14px 16px; grid-template-columns: 32px 1fr 34px; padding: 28px 0; }
+  .service-row p, .service-tags { grid-column: 2 / -1; }
+  .service-arrow { grid-column: 3; grid-row: 1; }
+}
 @media (max-width: 500px) {
   .play-icon { height: 46px; width: 46px; }
   .video-lightbox { padding: 4vw; }

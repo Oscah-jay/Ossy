@@ -25,6 +25,12 @@ function ProjectVisual({ tone, number, image, title, motion = false }: { tone: s
   </div>
 }
 
+const services = [
+  { id: '01', title: 'Brand identity', copy: 'Logos, color, type, and guidelines that give a business a clear voice and keep it consistent everywhere it shows up.', tags: ['Logo design', 'Visual systems', 'Guidelines'], tone: 'coral' },
+  { id: '02', title: 'UI/UX & web design', copy: 'Research-led interfaces, prototypes, and responsive websites that make products easier to understand and use.', tags: ['Web design', 'Dashboards', 'Prototyping'], tone: 'blue' },
+  { id: '03', title: 'Editorial & print', copy: 'Flyers, posters, brochures, and layouts that carry a brand beyond the screen with the same care.', tags: ['Print design', 'Layout', 'Packaging'], tone: 'yellow' },
+  { id: '04', title: 'Motion & campaigns', copy: 'Social campaigns, promos, and motion graphics that help ideas get noticed and remembered.', tags: ['Social media', 'Motion graphics', 'Promo video'], tone: 'purple' },
+]
 export default function Page() {
   const [filter, setFilter] = useState('all')
   const [activeCase, setActiveCase] = useState(0)
@@ -88,10 +94,31 @@ export default function Page() {
       <a className="view-all-designs" href="/designs">View all designs <span>↗</span></a>
     </section>
 
+        <section className="services-section container" id="services">
+      <div className="section-heading">
+        <div>
+          <p className="eyebrow">04 / What I do</p>
+          <h2>Services built<br />around <em>your</em> goals.</h2>
+        </div>
+        <p className="section-intro">From a first logo to a full product interface, here is how I can help your idea take shape.</p>
+      </div>
+      <div className="service-list">
+        {services.map((service) => (
+          <a className={`service-row service-${service.tone}`} href="#contact" key={service.id} aria-label={`Start a ${service.title} project`}>
+            <span className="service-id">{service.id}</span>
+            <h3>{service.title}</h3>
+            <p>{service.copy}</p>
+            <ul className="service-tags">{service.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul>
+            <span className="service-arrow">↗</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
     <section className="about-section" id="about">
       <div className="container about-layout">
         <div>
-          <p className="eyebrow">04 / A little about me</p>
+          <p className="eyebrow">05 / A little about me</p>
           <h2>Equal parts<br /><em>curious</em> and<br />particular.</h2>
         </div>
         <div className="about-copy">
@@ -107,7 +134,7 @@ export default function Page() {
     <footer className="site-footer" id="contact">
       <div className="container">
         <div className="footer-top">
-          <p className="eyebrow">05 / Start a conversation</p>
+          <p className="eyebrow">06 / Start a conversation</p>
           <h2>Have a good<br /><em>one?</em> Say hello.</h2>
           <a className="email-link" href="mailto:oscahjuma270@gmail.com">oscahjuma270@gmail.com <span>↗</span></a>
         </div>
