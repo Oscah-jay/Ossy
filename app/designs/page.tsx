@@ -20,6 +20,7 @@ const designs: Design[] = [
   { title: 'PUX Brand', type: 'Print Design', year: '2025', category: 'editorial', image: 'https://p-images.vercel.app/images/projects/8.png', size: 'standard' },
   { title: 'Precious', type: 'Print Design', year: '2026', category: 'editorial', image: 'https://p-images.vercel.app/images/projects/Her%20Own%20Beauty.png', size: 'tall' },
   { title: 'Imani Realty Groups', type: 'Brand identity', year: '2026', category: 'identity', image: 'https://cdn.sanity.io/images/pda6g6vd/production/a8717300444cf24c3cad6b72002d08889bd3137c-1280x720.png', size: 'wide' },
+  { title: 'I\'m Possible', type: 'Graphic Design', year: '2026', category: 'digital', image: 'https://p-images.vercel.app/images/graphics/Be%20Your%20Own.png', size: 'tall' },
   { title: 'Youth Ministry', type: 'Digital campaign', year: '2026', category: 'digital', image: 'https://p-images.vercel.app/images/projects/YOUTH%20NFM.png', size: 'tall' },
   { title: 'Mercan Autospares', type: 'UI/UX Design', year: '2025', category: 'ui-ux', image: 'https://p-images.vercel.app/images/ui-ux/Component%2016.png', size: 'wide' },
   { title: 'Creative Suite', type: 'Digital campaign', year: '2025', category: 'digital', image: 'https://p-images.vercel.app/images/projects/11.jpg', size: 'standard' },
