@@ -66,8 +66,83 @@ export default function Page() {
     <section className="marquee-band" aria-label="Services"><div className="marquee-track">IDENTITY <span>✳</span> DIGITAL PRODUCTS <span>✳</span> MOTION <span>✳</span> EDITORIAL <span>✳</span> IDENTITY <span>✳</span> DIGITAL PRODUCTS <span>✳</span></div></section>
 
     <section className="work-section container" id="work">
-      <div className="section-heading"><div><p className="eyebrow">01 / Selected work</p><h2>A mix of <em>thinking</em><br />and making.</h2></div><div className="filter-bar" role="group" aria-label="Filter projects">{[['all', 'All work'], ['uiux', 'UI/UX'], ['graphic', 'Graphic']].map(([key, label]) => <button key={key} className={filter === key ? 'filter active' : 'filter'} onClick={() => setFilter(key)}>{label}</button>)}</div></div>
-      <div className="project-grid">{projects.filter((p) => filter === 'all' || p.category === filter).map((project) => <article className={`project-card card-${project.tone}`} key={project.id}><a href={project.category === 'uiux' ? `/case-study/${project.slug}` : '#graphic-work'} aria-label={`View ${project.title}`}><ProjectVisual tone={project.tone} number={project.id} image={project.image} title={project.title} motion={project.title === 'After hours'} /></a><div className="project-info"><div><p className="project-type">{project.type} <span>{project.year}</span></p><h3>{project.title}</h3><p className="project-description">{project.description}</p></div><a className="arrow-link" href={project.category === 'uiux' ? `/case-study/${project.slug}` : '#graphic-work'} aria-label={`View ${project.title}`}>↗</a></div><div className="tag-list">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div></article>)}</div><a className="view-all-designs" href="/designs">View all designs <span>↗</span></a>
+      <div className="section-heading">
+        <div>
+          <p className="eyebrow">01 / Selected work</p>
+          <h2>A mix of <em>thinking</em><br />and making.</h2>
+          </div>
+          
+<div className="filter-bar" role="group" aria-label="Filter projects">
+  {[
+    ['all', 'All work'],
+    ['uiux', 'UI/UX'],
+    ['graphic', 'Graphic']
+  ].map(([key, label]) => (
+    <button
+      key={key}
+      className={filter === key ? 'filter active' : 'filter'}
+      onClick={() => setFilter(key)}
+    >
+      {label}
+    </button>
+  ))}
+</div>
+</div>
+
+<div className="project-grid">
+  {projects
+    .filter((p) => filter === 'all' || p.category === filter)
+    .map((project) => (
+      <article
+        className={`project-card card-${project.tone}`}
+        key={project.id}
+      >
+        <a
+          href={`/case-study/${project.slug}`}
+          aria-label={`View ${project.title}`}
+        >
+          <ProjectVisual
+            tone={project.tone}
+            number={project.id}
+            image={project.image}
+            title={project.title}
+            motion={project.title === 'After hours'}
+          />
+        </a>
+
+        <div className="project-info">
+          <div>
+            <p className="project-type">
+              {project.type} <span>{project.year}</span>
+            </p>
+            <h3>{project.title}</h3>
+            <p className="project-description">
+              {project.description}
+            </p>
+          </div>
+
+          <a
+            className="arrow-link"
+            href={`/case-study/${project.slug}`}
+            aria-label={`View ${project.title}`}
+          >
+            ↗
+          </a>
+        </div>
+
+        <div className="tag-list">
+          {project.tags.map((tag) => (
+            <span key={tag}>{tag}</span>
+          ))}
+        </div>
+      </article>
+    ))}
+</div>
+
+<a className="view-all-designs" href="/designs">
+  View all designs <span>↗</span>
+</a>
+
     </section>
 
     <section className="case-section" id="case-studies"><div className="container"><div className="section-heading case-heading"><div><p className="eyebrow">02 / UI/UX case studies</p><h2>From the first<br /><em>question</em> to shipped.</h2></div><p className="section-intro">Every interface starts with listening. Here is how I turn ambiguity into products people want to use.</p></div><div className="case-layout"><div className="case-tabs" role="tablist" aria-label="Case studies">{caseStudies.map((item, index) => <button key={item.title} className={activeCase === index ? 'case-tab active' : 'case-tab'} onClick={() => setActiveCase(index)} role="tab" aria-selected={activeCase === index}><span>0{index + 1}</span>{item.title}<b>↗</b></button>)}</div><article className={`case-detail detail-${caseStudies[activeCase].tone}`}><p className="case-kicker">{caseStudies[activeCase].title} / Product design</p><h3>{caseStudies[activeCase].label}</h3><p>{caseStudies[activeCase].copy}</p><div className="case-stats">{caseStudies[activeCase].stats.map(([value, label]) => <div key={label}><strong>{value}</strong><span>{label}</span></div>)}</div><div className="case-art"><span className="wireframe-top" /><span className="wireframe-card" /><span className="wireframe-side" /><span className="wireframe-button" /></div></article></div></div></section>
