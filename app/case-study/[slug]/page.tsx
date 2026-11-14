@@ -3,7 +3,8 @@
 import Link from 'next/link'
 import { useParams } from 'next/navigation'
 
-const studies: Record<string, { title: string; label: string; image: string; tone: string; intro: string; challenge: string; approach: string; outcome: string; steps: string[] }> = {
+const studies: Record<string, { title: string; label: string; image: string; tone: string; intro: string; challenge: string; approach: string; outcome: string; projectUrl?: string; steps: string[] }> = {
+
   'mercan-autospares': { 
     title: 'Mercan Autospares', 
     label: 'A clearer route to automotive care.', 
@@ -13,7 +14,8 @@ const studies: Record<string, { title: string; label: string; image: string; ton
     challenge: 'Customers needed to move between parts, services, and business information without knowing where to start or which option was right for their vehicle.', 
     approach: 'I organized the experience around clear service pathways, responsive layouts, and a visual hierarchy that makes automotive information easier to scan and act on.', 
     outcome: 'A more approachable web experience that helps customers find the right product or service with less friction.', 
-    steps: ['Discovery & interviews', 'Information architecture', 'Responsive UI design', 'Prototype & testing'] 
+    steps: ['Discovery & interviews', 'Information architecture', 'Responsive UI design', 'Prototype & testing'] ,
+    projectUrl: 'https://www.figma.com/design/BxdZPLe8wG0dyoVhttiEfQ/Mercan-auto-spares?node-id=0-1&t=wxORoWXnfcv7pr4D-1'
   },
   'pure-uxels': {
     title: 'Pure UXels',
@@ -29,7 +31,8 @@ const studies: Record<string, { title: string; label: string; image: string; ton
         'Visual identity development',
         'UI/UX design & information architecture',
         'Website development & responsive optimization'
-    ]
+    ],
+    projectUrl: 'https://pureuxels.com'
 },
 'pxl-prints': {
     title: 'PXL-Prints',
@@ -45,7 +48,8 @@ const studies: Record<string, { title: string; label: string; image: string; ton
         'Visual identity development',
         'Product experience & information architecture',
         'UI/UX design & responsive layouts'
-    ]
+    ],
+    projectUrl: 'https://pxl-lilac.vercel.app/'
 },
 'newlife-fountain-ministries': {
     title: 'Newlife Fountain Ministries',
@@ -61,7 +65,9 @@ const studies: Record<string, { title: string; label: string; image: string; ton
         'Information architecture & content strategy',
         'UI/UX design & responsive development',
         'Donation integration & user experience refinement'
-    ]
+    ],
+    projectUrl: 'https://nfm-phi.vercel.app/'
+    
 },
   'agent-4': 
   { title: 'Agent 4', 
@@ -72,7 +78,8 @@ const studies: Record<string, { title: string; label: string; image: string; ton
     challenge: 'Social teams were balancing calendars, approvals, publishing, and reporting across disconnected tools, creating unnecessary context switching.', 
     approach: 'I mapped the publishing workflow and designed a focused dashboard that brings planning, content status, and performance into one clear workspace.', 
     outcome: 'A streamlined product experience that gives teams better visibility over their content and more confidence in what goes live next.', 
-    steps: ['Workflow research', 'Dashboard architecture', 'Interaction design', 'Beta validation'] 
+    steps: ['Workflow research', 'Dashboard architecture', 'Interaction design', 'Beta validation'],
+    projectUrl: 'https://www.figma.com/design/uLObMKQzpyC8oDHgFwV0XG/Agent4?node-id=0-1&t=6LkmhGXwk2gHVkeY-1' 
   },
   'go-cart': { 
     title: 'Go Cart', 
@@ -83,7 +90,8 @@ const studies: Record<string, { title: string; label: string; image: string; ton
     challenge: 'Customers, vendors, and delivery teams each needed different information at different moments, but the experience had to feel like one connected system.', 
     approach: 'I designed the core marketplace and operational dashboards around shared order states, clear handoffs, and fast actions for every participant.', 
     outcome: 'A unified product direction that makes ordering, vendor management, and delivery coordination feel more transparent.', 
-    steps: ['Service mapping', 'Marketplace flows', 'Operations dashboard', 'Design system'] 
+    steps: ['Service mapping', 'Marketplace flows', 'Operations dashboard', 'Design system'],
+    projectUrl: 'https://www.figma.com/design/ePTMv926E5XJIxkGc30QpB/witz-new?node-id=0-1&t=45zo5PnHHMaMi6rW-1' 
   },
 }
 
@@ -94,7 +102,69 @@ export default function CaseStudyPage() {
   return <main className={`study-page study-${study.tone}`}>
     <header className="study-header"><Link className="wordmark" href="/#top"><span className="Oscah">O</span><span>Oscah<br />Juma</span></Link><Link className="back-link" href="/#work">← Back to work</Link></header>
     <section className="study-hero container"><p className="eyebrow">UI/UX case study / Selected work</p><h1>{study.title}<br /><em>{study.label}</em></h1><p className="study-intro">{study.intro}</p><img className="study-cover" src={study.image} alt={`${study.title} interface project`} /></section>
-    <section className="study-content container"><aside><p className="eyebrow">The approach</p><ol>{study.steps.map((step, index) => <li key={step}><span>0{index + 1}</span>{step}</li>)}</ol></aside><div className="study-copy"><div><p className="eyebrow">01 / The challenge</p><h2>Start with the<br /><em>real problem.</em></h2><p>{study.challenge}</p></div><div><p className="eyebrow">02 / The approach</p><h2>Make the complex<br /><em>feel possible.</em></h2><p>{study.approach}</p></div><div><p className="eyebrow">03 / The outcome</p><h2>Useful by<br /><em>design.</em></h2><p>{study.outcome}</p></div></div></section>
+    
+<section className="study-content container">
+  <aside>
+    <p className="eyebrow">The approach</p>
+    <ol>
+      {study.steps.map((step, index) => (
+        <li key={step}>
+          <span>0{index + 1}</span>
+          {step}
+        </li>
+      ))}
+    </ol>
+  </aside>
+
+  <div className="study-copy">
+    <div>
+      <p className="eyebrow">01 / The challenge</p>
+      <h2>Start with the<br /><em>real problem.</em></h2>
+      <p>{study.challenge}</p>
+    </div>
+
+    <div>
+      <p className="eyebrow">02 / The approach</p>
+      <h2>Make the complex<br /><em>feel possible.</em></h2>
+      <p>{study.approach}</p>
+    </div>
+
+    <div>
+      <p className="eyebrow">03 / The outcome</p>
+      <h2>Useful by<br /><em>design.</em></h2>
+      <p>{study.outcome}</p>
+    </div>
+
+    
+{study.projectUrl && (
+  <div className="study-live-link pt-8 border-t border-current/15">
+    <p className="eyebrow mb-5">04 / Explore the project</p>
+
+    <a
+      href={study.projectUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group flex w-full items-center justify-between gap-6 rounded-xl border border-current/20 px-6 py-6 transition-all duration-300 hover:bg-white/5 sm:px-8 sm:py-8"
+    >
+      <div>
+        <h2 className="text-2xl font-medium tracking-tight sm:text-3xl">
+          Visit live project
+        </h2>
+        <p className="mt-2 text-sm opacity-60">
+          Explore the project in its real environment.
+        </p>
+      </div>
+
+      <span className="flex size-14 shrink-0 items-center justify-center rounded-full border border-current/30 text-2xl transition-all duration-300 group-hover:rotate-45 group-hover:bg-white group-hover:text-black sm:size-16">
+        ↗
+      </span>
+    </a>
+  </div>
+)}
+
+  </div>
+</section>
+
     <footer className="study-footer container"><Link href="/#work">← View all work</Link><Link href="/#contact">Start a project ↗</Link></footer>
   </main>
 }
