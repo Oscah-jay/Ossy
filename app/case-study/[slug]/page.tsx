@@ -93,6 +93,46 @@ const studies: Record<string, { title: string; label: string; image: string; ton
     steps: ['Service mapping', 'Marketplace flows', 'Operations dashboard', 'Design system'],
     projectUrl: 'https://www.figma.com/design/ePTMv926E5XJIxkGc30QpB/witz-new?node-id=0-1&t=45zo5PnHHMaMi6rW-1' 
   },
+  'chill-n-scoop': {
+  title: 'Chill n Scoop',
+  label: 'A little joy in every scoop.',
+  image: 'https://p-images.vercel.app/images/projects/CnS%20Branding.png',
+  tone: 'coral',
+  intro: 'A playful brand identity for an ice cream shop, translating the joy of frozen treats into a distinctive visual language across logo design, packaging, and brand applications.',
+  challenge: 'The brand needed an identity that could stand out in a competitive dessert market while communicating freshness, fun, and an inviting personality that appeals to customers of different ages.',
+  approach: 'I developed a recognizable logo and a vibrant visual identity built around playful typography, a carefully selected color palette, and cohesive packaging concepts. The identity was extended across ice cream containers and other brand touchpoints to create a consistent experience.',
+  outcome: 'A distinctive and approachable brand identity that gives Chill n Scoop a recognizable personality and a cohesive visual presence across its packaging and customer-facing materials.',
+  steps: [
+    'Brand discovery & direction',
+    'Logo conceptualization & design',
+    'Color palette & typography',
+    'Packaging design & mockups',
+    'Brand identity applications'
+  ],
+  projectUrl: ''
+},
+'irg-realty-group': {
+  title: 'IRG Realty Group',
+  label: 'Shaping spaces. Building confidence.',
+  image: 'https://p-images.vercel.app/images/projects/IRG%20Branding.png',
+  tone: 'green',
+  intro: 'A comprehensive brand identity project for IRG Realty Group, focused on developing a distinctive corporate presence within the real estate industry. The project explored how strategic logo design, visual consistency, and thoughtful brand applications could communicate the company’s values while establishing a recognizable identity across its touchpoints.',
+  challenge: 'In the competitive real estate industry, a brand needs to communicate more than the properties it represents. It must establish confidence, convey credibility, and create a lasting impression before a potential client even engages with the business. IRG required an identity that could position the company as a professional, contemporary, and dependable real estate group while differentiating it from conventional property brands. The challenge was to create a visual system that balanced corporate sophistication with a distinctive personality, without relying on overly familiar real estate symbols or generic industry aesthetics.',
+  approach: 'I approached the project by first establishing a visual direction that reflected the relationship between real estate, investment, and long-term value. The identity was built around a distinctive logo concept, using carefully considered proportions, visual balance, and a recognizable brand mark to establish a strong foundation. I then developed a complementary color palette and typography system that reinforced the intended corporate personality. Particular attention was given to how the identity would translate across different formats, ensuring that the logo remained recognizable and the visual language remained consistent whether applied to digital communications, printed materials, promotional assets, or corporate stationery.',
+  outcome: 'The result was a cohesive corporate identity that gives IRG Realty Group a more defined and recognizable visual presence. The branding establishes a consistent foundation for communicating the company’s identity across multiple platforms, helping bridge the gap between its corporate positioning and its customer-facing communications. Beyond the logo itself, the project demonstrates how a carefully developed visual system can give a real estate business a distinctive personality, communicate professionalism, and create a more unified brand experience.',
+  steps: [
+    'Brand discovery & visual research',
+    'Industry analysis & creative direction',
+    'Logo conceptualization & development',
+    'Logo refinement & visual balancing',
+    'Color palette & typography selection',
+    'Visual identity system development',
+    'Corporate stationery & brand applications',
+    'Brand mockups & presentation'
+  ],
+
+  projectUrl: ''
+},
 }
 
 export default function CaseStudyPage() {
