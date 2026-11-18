@@ -13,6 +13,8 @@ type Design = {
 }
 
 const designs: Design[] = [
+  { title: 'Chill n Scoop', type: 'Brand identity', year: '2026', category: 'identity', image: 'https://p-images.vercel.app/images/projects/CnS%20Branding.png', size: 'tall' },
+  { title: 'IRG Realty Group', type: 'Brand identity', year: '2026', category: 'identity', image: 'https://p-images.vercel.app/images/projects/IRG%20Branding.png', size: 'tall' },
   { title: 'Designer', type: 'Print Design', year: '2026', category: 'editorial', image: 'https://p-images.vercel.app/images/projects/O.png', size: 'tall' },
   { title: 'Pure Uxels', type: 'Brand identity', year: '2025', category: 'identity', image: 'https://p-images.vercel.app/images/branding/pux.png', size: 'wide' },
   { title: 'NFM Branding', type: 'Brand identity', year: '2024', category: 'identity', image: 'https://p-images.vercel.app/images/projects/NFM.png', size: 'standard' },
